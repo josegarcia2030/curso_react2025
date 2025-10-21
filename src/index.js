@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import { Saludo, UserCard } from "./Gretting";
 import Product, { Navbar } from "./Product";
 import {Button} from './Button'
+import {TaksCard} from './Taks'
+
 
 /*
 const rootElement = document.getElementById('root');
@@ -41,9 +43,11 @@ root.render(
 
     {/**Este es un comentario que utilizaremos */}
 
-    <Button text="Click me" />
+    {/* <Button text="Click me" />
     <Button text="Pay"/>
     <Button text="Hello Word"/>
-    <Button names='Joe'/>
+    <Button names='Joe'/> */}
+
+    <TaksCard ready={true}/>
   </>
 );

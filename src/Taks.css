@@ -1,0 +1,19 @@
+
+.card {
+    background-color: #202020;
+    color: #fff;
+    padding: 20px;
+}
+
+.title {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.bg-red {
+    background: red;
+}
+
+.bg-green {
+    background: green;
+}
