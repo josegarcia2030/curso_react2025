@@ -17,6 +17,14 @@ export function TaksCard({ready}){
         color: 'white',
     }
 
+    const buttonStyle = {
+        border: '0px',
+        padding: '10px',
+        background: 'tomato',
+        color: '#fff',
+        cursor: 'pointer'
+    }
+
     return <div className='card'>
         <h1 className='title'>My first workshop</h1>
         <p style={parrafo}>
@@ -28,5 +36,6 @@ export function TaksCard({ready}){
                 {ready ? 'Tarea realizada': 'Tarea Pendiente'}
             </span>
         </p>
+        <button style={buttonStyle}>More As</button>
     </div>
 }

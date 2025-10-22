@@ -4,6 +4,7 @@ import { Saludo, UserCard } from "./Gretting";
 import Product, { Navbar } from "./Product";
 import {Button} from './Button'
 import {TaksCard} from './Taks'
+import {Saludar} from './Saludar'
 
 
 /*
@@ -49,5 +50,7 @@ root.render(
     <Button names='Joe'/> */}
 
     <TaksCard ready={true}/>
+    <Saludar />
+    
   </>
 );
