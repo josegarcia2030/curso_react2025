@@ -5,7 +5,9 @@ export function Button({text, names="User"}){
     if(!text){
         console.error('El texto es requerido')
     }
-    return <button>
+    return <button onClick={function (){
+        console.log('Hola button')
+    }}>
         {text} - {names}
     </button>
 }

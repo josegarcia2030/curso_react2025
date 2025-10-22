@@ -13,6 +13,10 @@ ReactDOM.createRoot(rootElement);
 */
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const handleChange = (e)=> { //funcion flecha
+  console.log(e.target.value)
+}
+
 root.render(
   <>
   
@@ -44,13 +48,30 @@ root.render(
 
     {/**Este es un comentario que utilizaremos */}
 
-    {/* <Button text="Click me" />
-    <Button text="Pay"/>
+    {/* <Button text="Pay"/>
     <Button text="Hello Word"/>
     <Button names='Joe'/> */}
 
+
     <TaksCard ready={true}/>
-    <Saludar />
+    {/* <Saludar /> */}
+    <Button text="Click me" />
     
+    <input type="text" onClick={function(){
+      console.log('input seleccionado')
+    }}></input>
+    <input type="text" id="hello" onChange={handleChange} onDoubleClick={()=> {
+      console.log('doble click')
+    }}></input>
+
+    <form onSubmit={(e)=>{
+        e.preventDefault()
+        //console.log('enviado')
+        alert('enviado')
+      }}>
+      <h1>Registro de Usuarios</h1>
+      <button>Send</button>
+    </form>
+
   </>
 );
