@@ -5,6 +5,7 @@ import Product, { Navbar } from "./Product";
 import {Button} from './Button'
 import {TaksCard} from './Taks'
 import {Saludar} from './Saludar'
+import {Posts} from './Posts'
 
 
 /*
@@ -72,6 +73,8 @@ root.render(
       <h1>Registro de Usuarios</h1>
       <button>Send</button>
     </form>
+
+    <Posts />
 
   </>
 );
