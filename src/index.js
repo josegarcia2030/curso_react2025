@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import ReactDOM from "react-dom/client";
 import { Saludo, UserCard } from "./Gretting";
 import Product, { Navbar } from "./Product";
@@ -44,7 +44,11 @@ function Counter(){
   //let counter = 10;
 
   const [mensaje, setMensaje] = useState('')
+  const [counter, setCounter] = useState(0) 
 
+  useEffect(()=> {
+    console.log('render')
+  }, [counter])
 
   return (
   <div>
@@ -73,6 +77,14 @@ function Counter(){
         Guardar
     </button>
 
+    <hr />
+
+    <h1>Counter: {counter}</h1>
+    <button onClick={()=>{
+      setCounter(counter + 1)
+    }}>
+      Incrementar
+    </button>
   </div>
   )
 }
