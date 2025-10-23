@@ -2,11 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Saludo, UserCard } from "./Gretting";
 import Product, { Navbar } from "./Product";
-import {Button} from './Button'
-import {TaksCard} from './Taks'
-import {Saludar} from './Saludar'
-import {Posts} from './Posts'
-
+import { Button } from "./Button";
+import { TaksCard } from "./Taks";
+import { Saludar } from "./Saludar";
+import { Posts } from "./Posts";
 
 /*
 const rootElement = document.getElementById('root');
@@ -14,13 +13,31 @@ ReactDOM.createRoot(rootElement);
 */
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const handleChange = (e)=> { //funcion flecha
-  console.log(e.target.value)
-}
+const handleChange = (e) => {
+  //funcion flecha
+  console.log(e.target.value);
+};
+
+const user = [
+  {
+    id: 1,
+    name: "Ryan ray",
+    image: "https://robohash.org/user1",
+  },
+  {
+    id: 2,
+    name: "Joe",
+    image: "https://robohash.org/user2",
+  },
+  {
+    id: 3,
+    name: "Marcos",
+    image: "https://robohash.org/user3",
+  },
+];
 
 root.render(
   <>
-  
     {/* <Saludo title="hola Mundo" name="jose" />
     <Saludo title="Hola React" name="enrique" />
     <Saludo title="Hola JSX" />
@@ -38,7 +55,7 @@ root.render(
       }}
     />
 
-    <Product 
+    <Product
         id={1} 
         name="Pantalla de 25 pulgadas" 
         description="Pantalla led de 55 pulgadas marca samsung"
@@ -53,9 +70,10 @@ root.render(
     <Button text="Hello Word"/>
     <Button names='Joe'/> */}
 
-
-    <TaksCard ready={true}/>
     {/* <Saludar /> */}
+
+    {/* <TaksCard ready={true}/>
+    
     <Button text="Click me" />
     
     <input type="text" onClick={function(){
@@ -74,7 +92,15 @@ root.render(
       <button>Send</button>
     </form>
 
-    <Posts />
+    <Posts /> */}
 
+    {user.map((user, index) => {
+      return (
+        <div key={index}>
+          <h1>{user.name}</h1>
+          <img src={user.image}/>
+        </div>
+      );
+    })}
   </>
 );
