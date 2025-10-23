@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom/client";
 import { Saludo, UserCard } from "./Gretting";
 import Product, { Navbar } from "./Product";
@@ -6,6 +6,7 @@ import { Button } from "./Button";
 import { TaksCard } from "./Taks";
 import { Saludar } from "./Saludar";
 import { Posts } from "./Posts";
+//import {useState} from 'react'
 
 /*
 const rootElement = document.getElementById('root');
@@ -18,7 +19,7 @@ const handleChange = (e) => {
   console.log(e.target.value);
 };
 
-const user = [
+/* const user = [
   {
     id: 1,
     name: "Ryan ray",
@@ -34,7 +35,48 @@ const user = [
     name: "Marcos",
     image: "https://robohash.org/user3",
   },
-];
+]; */
+
+
+function Counter(){
+
+  //const [counter, setCounter] = useState(10)
+  //let counter = 10;
+
+  const [mensaje, setMensaje] = useState('')
+
+
+  return (
+  <div>
+    {/* <h1>Counter: {counter}</h1>
+    <button onClick={() => {
+      //counter += 10;
+      setCounter(counter + 1)
+    }}>
+      Sumar
+    </button>
+    <button onClick={() => {
+      setCounter(counter - 1)
+    }}>
+      Restar
+    </button>
+    <button onClick={() => {
+      setCounter(1000)
+    }}>
+      Reiniciar
+    </button> */}
+
+    <input onChange={(e) => setMensaje(e.target.value)}/>
+    <button onClick={()=> {
+      alert('El mensaje es: '+ mensaje)
+    }}>
+        Guardar
+    </button>
+
+  </div>
+  )
+}
+
 
 root.render(
   <>
@@ -94,13 +136,15 @@ root.render(
 
     <Posts /> */}
 
-    {user.map((user, index) => {
+    {/* {user.map((user, index) => {
       return (
         <div key={index}>
           <h1>{user.name}</h1>
           <img src={user.image}/>
         </div>
       );
-    })}
+    })} */}
+
+    <Counter />
   </>
 );
